@@ -84,7 +84,11 @@ function createTask() {
     taskInputText.value = "";
 
 }
-
+/**
+ * This function creates a checkbox, assigns type "checkbox"
+ * run an event listener that when clicked the checkbox class will be chnaged to "completed"
+ * that triggers a ccs style that will strikeout the user input on the task list
+ */
 function completedTask(taskText) {
     const taskCheckbox = document.createElement("input");
     taskCheckbox.type = "checkbox";
