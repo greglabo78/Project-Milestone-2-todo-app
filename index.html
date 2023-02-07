@@ -4,11 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--google fonts and font awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
     <link rel="stylesheet" href="assets/CSS/style.css">
-    <title>Document</title>
+    <title>My Daily Planner</title>
 </head>
 <body>
-
+    <h1 class="heading"> <img class="logo" src="assets/images/To Do list application logo.webp">My To Do List Application</h1>
+    <form id="form">
+        <input type="text" id="taskInput" placeholder="Enter task">
+        <button type="submit">Add Task</button>
+    </form>
+      <section id="taskList">
+        <!-- Tasks will be added here -->
+      </section>
+      <button class="btn" id="btn-clear">clear completed tasks</button>
+      <button class="btn" id="btn-clearall">clear all tasks</button>
     <script src="assets/js/script.js"></script>
 </body>
 </html>
