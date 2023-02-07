@@ -28,8 +28,6 @@ function bindButtonEvents() {
 
        createTask();   
        
-       completedTask();
-
     });
 
    
@@ -42,17 +40,6 @@ function bindButtonEvents() {
 
     });
 
-   
-
-    clearAllTasksButton.addEventListener("click", function(el) {       
-
-       el.preventDefault();
-
-       clearAllTasks();
-
-    });
-
-    
 }
 
    
@@ -68,7 +55,8 @@ function bindButtonEvents() {
  * The createTask function creates a div element , adds a class "task"
  * creates a span elemnet for the user input  give its an id pf "span" 
  * and appends the imput to the task list
- * A validation is included in the function in an event there is no input an alrt is triggred.
+ * A validation is included in the function in an event there is no input an alert is triggred.
+ * Append a checkbox to user task input
  */
 
 
@@ -90,17 +78,21 @@ function createTask() {
     task.appendChild(taskText);
     taskList.appendChild(task);
 
+    task.appendChild(completedTask(taskText));
+
     /* Clear taskInput */
     taskInputText.value = "";
 
 }
 
-function completedTask() {
+function completedTask(taskText) {
     const taskCheckbox = document.createElement("input");
     taskCheckbox.type = "checkbox";
-    task.Text.classList.toggle("completed");
-    task.appendChild(taskCheckbox);
+    taskCheckbox.addEventListener("click", function() {
+        taskText.classList.toggle("completed");
 
+    });
+ return taskCheckbox;
 }
 
 function editTask() {
