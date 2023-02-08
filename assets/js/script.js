@@ -113,7 +113,24 @@ function deleteTask() {
 
 }
 
+/**
+ * The function runs a loop that removes all tasks within the tasklist that have a class name "completed"
+ */
+
 function clearCompletedTasks() {
+    const taskList = document.getElementById("task-list");
+    const tasks = taskList.getElementsByClassName("task");
+
+    for (let i = 0; i < tasks.length; i++) {
+        const task = tasks[i];
+        const checkbox = task.getElementsByTagName("input")[0];
+        if (checkbox.checked) {
+            taskList.removeChild(task);
+        }
+
+    }
+
+
 
 }
 
