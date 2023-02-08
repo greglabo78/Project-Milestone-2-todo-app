@@ -2,7 +2,7 @@
 
 body {
 
-  background-color:lightgray;
+  background-color: lightgray;
 
   font-family: Arial, sans-serif;
 
@@ -36,11 +36,11 @@ body {
 
 .task {
 
-  display:flex;
+  display: flex;
 
   justify-content: space-between;
 
-  align-items:center;
+  align-items: center;
 
   padding: 10px;
 
@@ -112,7 +112,7 @@ button, #button2,
 
 button:hover {
 
-  background-color:lightskyblue;
+  background-color: lightskyblue;
 
 }
 
@@ -147,3 +147,80 @@ button:hover {
   background-color: red;
 
 }
+
+
+
+/* Media Queries */
+
+@media (max-width: 992px) {
+
+  input[type="text"] {
+
+    width: 60%;
+
+  }
+
+}
+
+
+
+@media (max-width: 768px) {
+
+  .task {
+
+    display: block;
+
+  }
+
+  .task-description {
+
+    display: inline-block;
+
+    width: 80%;
+
+  }
+
+  input[type="text"] {
+
+    width: 100%;
+
+  }
+
+}
+
+
+
+@media (max-width: 576px) {
+
+  .heading {
+
+    font-size: 2rem;
+
+  }
+
+}
+
+@media only screen and (max-device-width: 1024px) {
+
+  .heading {
+
+    font-size: 1.5rem;
+
+  }
+
+  input[type="text"] {
+
+    font-size: 14px;
+
+  }
+
+  button, #button2,
+
+  #button3, #clear, #clearall {
+
+    padding: 5px 10px;
+
+  }
+
+}
+

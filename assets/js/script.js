@@ -48,20 +48,12 @@ function bindButtonEvents() {
 
 }
 
-   
-
-
-
-
-
-
-
-
-/**
+   /**
  * The createTask function creates a div element , adds a class "task"
- * creates a span elemnet for the user input  give its an id pf "span" 
+ * creates a span element for the user input  give its an id of "span" 
  * and appends the imput to the task list
  * A validation is included in the function in an event there is no input an alert is triggred.
+ * Avalidation is included in the function to alert user of duplicate tasks
  * Append a checkbox to user task input
  */
 
@@ -73,6 +65,14 @@ function createTask() {
     if (taskInputText.value < 1) {
         alert("Please enter a task name");
         return;
+    }
+
+    const existingTasks = taskList.getElementsByTagName("span");
+    for (let i = 0; i < existingTasks.length; i++) {
+        if (existingTasks[i].textContent === taskInputText.value) {
+            alert("Task already exists in the list");
+            return;
+        }
     }
 
     const task = document.createElement("div");
@@ -103,14 +103,6 @@ function completedTask(taskText) {
 
     });
  return taskCheckbox;
-}
-
-function editTask() {
-
-}
-
-function deleteTask() {
-
 }
 
 /**
