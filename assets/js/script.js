@@ -117,6 +117,10 @@ function clearCompletedTasks() {
 
 }
 
+/**
+ * This function when triggered by a button click will delete all the tasks entered by the user 
+ * that have been initally appended into the tasklist
+ */
 function clearAllTasks() {
     const taskList = document.getElementById("task-list");
     while (taskList.firstChild) {
