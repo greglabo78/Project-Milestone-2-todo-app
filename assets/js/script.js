@@ -2,15 +2,13 @@ const form = document.getElementById("form");
 
 // Wait for the DOM to finish loading before loading before running the ToDo application
 
-//Get the button Elements and add event listners to them
-
- 
-
 document.addEventListener("DOMContentLoaded", function() {
 
     bindButtonEvents();
 
 });
+
+//Get the button Elements and add event listners to them
 
 function bindButtonEvents() {
 
@@ -39,6 +37,14 @@ function bindButtonEvents() {
        clearCompletedTasks();
 
     });
+
+    clearAllTasksButton.addEventListener("click", function(el) {       
+
+        el.preventDefault();
+ 
+        clearAllTasks();
+ 
+     });
 
 }
 
@@ -112,6 +118,10 @@ function clearCompletedTasks() {
 }
 
 function clearAllTasks() {
+    const taskList = document.getElementById("task-list");
+    while (taskList.firstChild) {
+        taskList.removeChild(taskList.firstChild);
+    }
 
 }
 
