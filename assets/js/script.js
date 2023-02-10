@@ -17,7 +17,11 @@ function bindButtonEvents() {
 
   const clearAllTasksButton = document.getElementById("clear-all-tasks");
 
- 
+  addTaskButton.addEventListener("click", function (el) {
+    el.preventDefault();
+
+    createTask();
+  });
 
   form.addEventListener("submit", function (el) {
     el.preventDefault();
