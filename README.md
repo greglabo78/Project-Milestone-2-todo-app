@@ -46,6 +46,17 @@ Lighthouse Desktop
 
 ## Test Cases
 
+Test Label | Test Action | Expected Outcome | Test Outcome
+-------- |-------- |-------- |-------- |
+Data entry | Submit empty task into the form | Alert telling user to put a task name | PASS
+Data entry | Submit a task name | task is added to the task list | PASS
+completed task | task checkbox is toggled to checked | task display changes and is struckout on the list | PASS
+Clear Completed task | check all completed task and click clear completed task button | all checked task are removed from the task list | PASS
+Clear Completed task | leave all task unchecked and click clear completed task button | task remain unchanged on the tasklist | PASS
+Clear all tasks | click the clear all task button | all tasks checked or unchecked is removed from the task list | PASS
+Submit form | click the add a task button | task is added to the tasklist | PASS
+Submit form | Press Enter/return key on the keyboard | task is added to the task list | PASS
+
 As a user, I would like to view all entries in a tasklist format
 
    - ![alt text](assets/images/Testcase4.png "Testcase4")
@@ -110,6 +121,10 @@ GitHub
 # Supported screens and browsers
 
 - For this web application diffeent screen sizes were used and tested and no errors were found.
+  - 1024px wide
+  - 992px wide
+  - 786px wide
+  - 576px wide
 
 - Broswers
   - Google Chrome
