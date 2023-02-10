@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //Get the button Elements and add event listners to them
+//Event Listener added to form to enable submit action via retrun key
 
 function bindButtonEvents() {
   const addTaskButton = document.getElementById("add-task");
