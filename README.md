@@ -1,6 +1,6 @@
 **TO DO LIST APPLICATION**
 ========================
-![alt text](assets/images/am%20i%20responsive%20.png "amiresponsive")
+![alt text](readme-images/am-i-responsive.png "amiresponsive")
 
 **Visit** [**TODO List App**](https://8000-greglabo78-projectmiles-p0ioxtmbmni.ws-eu86.gitpod.io/)
 
@@ -21,7 +21,7 @@ As a user i would like to avoid having the same tasks input twice
 As a user i would like to avoid an empty entry
 
 # Features
-![alt text](assets/images/Features.png "Features")
+![alt text](readme-images/Features.png "Features")
 - Add a Task
 - Clear completed tasks
 - Clear all tasks
@@ -30,18 +30,18 @@ As a user i would like to avoid an empty entry
 
 ## Code Validation
   - W3C HTML Validator
-    - [index.html](assets/images/W3C%20html%20validation.png)
+    - [index.html](readme-images/W3C%20html%20validation.png)
 
 - W3C CSS Validator
-    - [style.css](assets/images/W3C%20Css%20Validation%20.png)
+    - [style.css](readme-images/W3C%20Css%20Validation%20.png)
 
 Lighthouse mobile
 
-![alt text](assets/images/Lighthouse%20mobile.png "Lighthouse mobile")
+![alt text](readme-images/Lighthouse%20mobile.png "Lighthouse mobile")
 
 Lighthouse Desktop
 
-![alt text](assets/images/Lighthouse%20desktop.png "Lighthouse Desktop")
+![alt text](readme-images/Lighthouse%20desktop.png "Lighthouse Desktop")
 
 
 ## Test Cases
@@ -59,48 +59,48 @@ Submit form | Press Enter/return key on the keyboard | task is added to the task
 
 As a user, I would like to view all entries in a tasklist format
 
-   - ![alt text](assets/images/Testcase4.png "Testcase4")
+   - ![alt text](readme-images/Testcase4.png "Testcase4")
 
 
 As a user i would like to identify completed tasks
 
-  - ![alt text](assets/images/Testcase2.png "Testcase2")
+  - ![alt text](readme-images/Testcase2.png "Testcase2")
 
 
 As a user i would like to avoid having the same tasks input twice
 
-  - ![alt text](assets/images/Testcase%203.png "Testcase3")
+  - ![alt text](readme-images/Testcase%203.png "Testcase3")
 
 
 As a user i would like to avoid an empty entry
 
-  - ![alt text](assets/images/Testcase%201.png "Testcase1")
+  - ![alt text](readme-images/Testcase%201.png "Testcase1")
 
 
 ### Browser Compatibility
 
 Safari
 
-- ![alt text](assets/images/Safari%20.png "Safari")
+- ![alt text](readme-images/Safari%20.png "Safari")
 
 Chrome
 
-- ![alt text](assets/images/Chrome.png "Chrome")
+- ![alt text](readme-images/Chrome.png "Chrome")
 
 
 Micorsoft Edge
 
-![alt text](assets/images/Edge%20-%20Test.PNG "Edge")
+![alt text](readme-images/Edge%20-%20Test.PNG "Edge")
 
 
 ## Fixed Bugs
 
 - CSS code flagged by W3C validator for one error
 
-![alt text](assets/images/bugs%20for%20W3C%20ccs%20validation.png "bug")
+![alt text](readme-images/bugs%20for%20W3C%20ccs%20validation.png "bug")
 
 
-![alt text](assets/images/W3C%20Css%20Validation%20.png "css")
+![alt text](readme-images/W3C%20Css%20Validation%20.png "css")
 
 
 # Technology
