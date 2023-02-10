@@ -2,93 +2,85 @@ const form = document.getElementById("form");
 
 // Wait for the DOM to finish loading before loading before running the ToDo application
 
-document.addEventListener("DOMContentLoaded", function() {
-
-    bindButtonEvents();
-
+document.addEventListener("DOMContentLoaded", function () {
+  bindButtonEvents();
 });
 
 //Get the button Elements and add event listners to them
 
 function bindButtonEvents() {
+  const addTaskButton = document.getElementById("add-task");
 
-    const addTaskButton = document.getElementById("add-task");
+  const clearCompletedTasksButton = document.getElementById(
+    "clear-completed-tasks"
+  );
 
-    const clearCompletedTasksButton = document.getElementById("clear-completed-tasks");
+  const clearAllTasksButton = document.getElementById("clear-all-tasks");
 
-    const clearAllTasksButton = document.getElementById("clear-all-tasks");
+  addTaskButton.addEventListener("click", function (el) {
+    el.preventDefault();
 
-   
+    createTask();
+  });
 
-    addTaskButton.addEventListener("click", function(el) {
+  form.addEventListener("submit", function (el) {
+    el.preventDefault();
 
-       el.preventDefault();
+    createTask();
+  });
 
-       createTask();   
-       
-    });
+  clearCompletedTasksButton.addEventListener("click", function (el) {
+    el.preventDefault();
 
-   
+    clearCompletedTasks();
+  });
 
-    clearCompletedTasksButton.addEventListener("click", function(el) {       
+  clearAllTasksButton.addEventListener("click", function (el) {
+    el.preventDefault();
 
-       el.preventDefault();
-
-       clearCompletedTasks();
-
-    });
-
-    clearAllTasksButton.addEventListener("click", function(el) {       
-
-        el.preventDefault();
- 
-        clearAllTasks();
- 
-     });
-
+    clearAllTasks();
+  });
 }
 
-   /**
+/**
  * The createTask function creates a div element , adds a class "task"
- * creates a span element for the user input  give its an id of "span" 
+ * creates a span element for the user input  give its an id of "span"
  * and appends the imput to the task list
  * A validation is included in the function in an event there is no input an alert is triggred.
  * Avalidation is included in the function to alert user of duplicate tasks
  * Append a checkbox to user task input
  */
 
-
 function createTask() {
-    const taskInputText = document.getElementById("task-input");
-    const taskList = document.getElementById("task-list");
+  const taskInputText = document.getElementById("task-input");
+  const taskList = document.getElementById("task-list");
 
-    if (taskInputText.value < 1) {
-        alert("Please enter a task name");
-        return;
+  if (taskInputText.value < 1) {
+    alert("Please enter a task name");
+    return;
+  }
+
+  const existingTasks = taskList.getElementsByTagName("span");
+  for (let i = 0; i < existingTasks.length; i++) {
+    if (existingTasks[i].textContent === taskInputText.value) {
+      alert("Task already exists in the list");
+      return;
     }
+  }
 
-    const existingTasks = taskList.getElementsByTagName("span");
-    for (let i = 0; i < existingTasks.length; i++) {
-        if (existingTasks[i].textContent === taskInputText.value) {
-            alert("Task already exists in the list");
-            return;
-        }
-    }
+  const task = document.createElement("div");
+  task.classList.add("task");
 
-    const task = document.createElement("div");
-    task.classList.add("task");
+  const taskText = document.createElement("span");
+  taskText.setAttribute("id", "span");
+  taskText.textContent = taskInputText.value;
+  task.appendChild(taskText);
+  taskList.appendChild(task);
 
-    const taskText = document.createElement("span");
-    taskText.setAttribute("id", "span");
-    taskText.textContent = taskInputText.value;
-    task.appendChild(taskText);
-    taskList.appendChild(task);
+  task.appendChild(completedTask(taskText));
 
-    task.appendChild(completedTask(taskText));
-
-    /* Clear taskInput */
-    taskInputText.value = "";
-
+  /* Clear taskInput */
+  taskInputText.value = "";
 }
 /**
  * This function creates a checkbox, assigns type "checkbox"
@@ -96,13 +88,12 @@ function createTask() {
  * that triggers a ccs style that will strikeout the user input on the task list
  */
 function completedTask(taskText) {
-    const taskCheckbox = document.createElement("input");
-    taskCheckbox.type = "checkbox";
-    taskCheckbox.addEventListener("click", function() {
-        taskText.classList.toggle("completed");
-
-    });
- return taskCheckbox;
+  const taskCheckbox = document.createElement("input");
+  taskCheckbox.type = "checkbox";
+  taskCheckbox.addEventListener("click", function () {
+    taskText.classList.toggle("completed");
+  });
+  return taskCheckbox;
 }
 
 /**
@@ -110,31 +101,25 @@ function completedTask(taskText) {
  */
 
 function clearCompletedTasks() {
-    const taskList = document.getElementById("task-list");
-    const tasks = taskList.getElementsByClassName("task");
+  const taskList = document.getElementById("task-list");
+  const tasks = taskList.getElementsByClassName("task");
 
-    for (let i = 0; i < tasks.length; i++) {
-        const task = tasks[i];
-        const checkbox = task.getElementsByTagName("input")[0];
-        if (checkbox.checked) {
-            taskList.removeChild(task);
-        }
-
+  for (let i = 0; i < tasks.length; i++) {
+    const task = tasks[i];
+    const checkbox = task.getElementsByTagName("input")[0];
+    if (checkbox.checked) {
+      taskList.removeChild(task);
     }
-
-
-
+  }
 }
 
 /**
- * This function when triggered by a button click will delete all the tasks entered by the user 
+ * This function when triggered by a button click will delete all the tasks entered by the user
  * that have been initally appended into the tasklist
  */
 function clearAllTasks() {
-    const taskList = document.getElementById("task-list");
-    while (taskList.firstChild) {
-        taskList.removeChild(taskList.firstChild);
-    }
-
+  const taskList = document.getElementById("task-list");
+  while (taskList.firstChild) {
+    taskList.removeChild(taskList.firstChild);
+  }
 }
-
