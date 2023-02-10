@@ -111,6 +111,32 @@ GitHub
 
 - For this web application diffeent screen sizes were used and tested and no errors were found.
 
+- Broswers
+  - Google Chrome
+  - Microsoft Edge
+  - Safari
+
+# Deployment
+
+## GitHub Pages
+
+- The site was deployed to GitHub pages. Below are the steps to deploy:
+- In the GitHub repository, navigate to the settings tab
+- From the source section drop-down menu, select the main branbch
+- Once you have seslected the main branh , the page will refresh automatically with a detailed ribbon display
+  to indicate a succesful deployment.
+
+GitPod
+- The site was coded using Gitpod.
+- In the GitHib repository, press the green GitPod button for the transfer of the project
+  to the GitPod enviroment
+
+# Credit
+- Brian Macharia my mentor who gave me this idea and guided me on the scope 
+- Code Institute for the [Love Maths](https://greglabo78.github.io/love-maths/) project that was the spark that started all this
+-  All Pictures used on the website were taken from Google images
+- Slack forum for thier continous support on my jurney thus far
+
 
 
 
